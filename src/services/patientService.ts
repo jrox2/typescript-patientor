@@ -1,10 +1,10 @@
 import patientData from '../../data/patients.json';
 
-import { NonSensitivePatientEntry, Patient } from '../types';
+import { NewPatientEntry, NonSensitivePatientEntry, PatientEntry } from '../types';
 
-const patients: Array<Patient> = patientData as Array<Patient>;
+const patients: Array<PatientEntry> = patientData as Array<PatientEntry>;
 
-const getPatients = (): Array<Patient> => {
+const getPatients = (): Array<PatientEntry> => {
     return patients;
 };
 
@@ -18,7 +18,22 @@ const getNonSensitiveEntries = (): NonSensitivePatientEntry [] => {
     }));
   };
 
+const addPatient = (
+    (entry: NewPatientEntry ): PatientEntry => {
+
+     const newPatientEntry = {
+        id: Math.random().toString(36).substr(2, 9),
+        ...entry
+    };
+
+    patients.push(newPatientEntry);
+
+    return newPatientEntry;
+
+});
+
 export default {
     getPatients,
-    getNonSensitiveEntries
+    getNonSensitiveEntries,
+    addPatient
 };

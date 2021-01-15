@@ -1,0 +1,10 @@
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+"name": "Tony Montana",
+"dateOfBirth": "1971-01-14",
+"ssn": "140171-1234",
+"gender": "male",
+"occupation": "Chief"
+}
