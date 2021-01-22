@@ -12,7 +12,7 @@ const patients: PatientEntry[] = [
       {
         id: 'd811e46d-70b3-4d90-b090-4535c7cf8fb1',
         date: '2015-01-02',
-        type: 'Hospital',
+        type: 'HospitalEntry',
         specialist: 'MD House',
         diagnosisCodes: ['S62.5'],
         description:
@@ -35,7 +35,7 @@ const patients: PatientEntry[] = [
       {
         id: 'fcd59fa6-c4b4-4fec-ac4d-df4fe1f85f62',
         date: '2019-08-05',
-        type: 'OccupationalHealthcare',
+        type: 'OccupationalHealthcareEntry',
         specialist: 'MD House',
         employerName: 'HyPD',
         diagnosisCodes: ['Z57.1', 'Z74.3', 'M51.2'],
@@ -77,7 +77,7 @@ const patients: PatientEntry[] = [
         id: 'fcd59fa6-c4b4-4fec-ac4d-df4fe1f85f62',
         date: '2019-09-10',
         specialist: 'MD House',
-        type: 'OccupationalHealthcare',
+        type: 'OccupationalHealthcareEntry',
         employerName: 'FBI',
         description: 'Prescriptions renewed.',
       },
